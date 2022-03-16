@@ -99,7 +99,7 @@ console.log(pageCount)
         <Table className={classes.table}>
             <TableHead>
                 <TableRow className={classes.thead}>
-                    <TableCell>Department</TableCell>
+                    <TableCell>Departmenttest</TableCell>
                     <TableCell>Director </TableCell>
                 
                     <TableCell>Email</TableCell>
