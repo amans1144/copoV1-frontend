@@ -11,6 +11,8 @@ import './University.css'
 import Spinner2 from '../../../Assets/Images/spinner2.svg'
 
 
+
+
 const useStyles = makeStyles({
     header:{
         marginTop:'1%',
