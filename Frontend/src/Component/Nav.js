@@ -4,6 +4,11 @@ import './Nav.css'
 import Logo from '../Assets/bg/revalogo.svg';
 
 
+const removeToken = (authToken) => {
+  localStorage.removeItem("token");
+  localStorage.setToken(null);
+};
+
 function Navbar() {
     return (
      <>
@@ -23,7 +28,7 @@ function Navbar() {
         className="button mt-2 "
          Style="
          " 
-         > <a Style="color:white; text-decoration:none; " href="/logout">Logout</a></button>
+         > <a Style="color:white; text-decoration:none; " href={() => removeToken()}>Logout</a></button>
          </div>
     </div>
 

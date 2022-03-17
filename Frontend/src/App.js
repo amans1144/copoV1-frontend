@@ -22,11 +22,11 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 function App() {
   return (
     <BrowserRouter>
-        <Route exact path="/login" component={Login} />
+        <Route exact path="/" component={Login} />
 
       <NavBar />
       <Switch>
-        <Route exact path="/" component={Home} />
+        <Route exact path="/home" component={Home} />
         <Route exact path="/department" component={University} />
         <Route exact path="/cal" component={Cal} />
         <Route exact path="/add/cal" component={AddCal} />

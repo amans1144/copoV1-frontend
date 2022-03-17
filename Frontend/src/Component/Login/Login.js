@@ -30,14 +30,14 @@ const Login = ({ history }) => {
 
     try {
       const { data } = await axios.post(
-        "/api/auth/login",
+        "http://localhost:9000/v1/attainment/login",
         { email, password },
         config
       );
 
       localStorage.setItem("authToken", data.token);
 
-      history.push("/");
+      history.push("/home");
     } catch (error) {
       setError(error.response.data.error);
       setTimeout(() => {
@@ -45,6 +45,7 @@ const Login = ({ history }) => {
       }, 5000);
     }
   };
+  
 
   return (
     <div className="login-screen">
@@ -86,9 +87,7 @@ const Login = ({ history }) => {
           Login
         </button>
 
-        <span className="login-screen__subtext">
-          Don't have an account? <Link to="/register">Register</Link>
-        </span>
+     
       </form>
     </div>
   );
